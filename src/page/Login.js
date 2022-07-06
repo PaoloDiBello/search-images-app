@@ -38,7 +38,7 @@ export default function Login() {
   return (
     <div className="flex h-screen">
       <div className="m-auto text-3xl">
-        {error !== "" && <p className="text-red-500">{error}</p>}
+        {!!error && <p className="text-red-500">{error}</p>}
         <h1 className="text-center">Login</h1>
         <form>
           <div className="mb-6">
@@ -77,7 +77,7 @@ export default function Login() {
               onClick={handleForm}
             >
               {isLoading ? (
-                <i className="fas fa-circle-notch fa-spin"></i>
+                <i className="fas fa-circle-notch fa-spin" />
               ) : (
                 "Submit"
               )}
