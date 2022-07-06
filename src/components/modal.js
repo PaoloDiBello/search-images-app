@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { useNavigate  } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const liStyle = {
-  margin: 'auto',
-  width: '50%',
-  fontWeight: '600',
-  fontSize: '130%',
-    whiteSpace: "nowrap"
-}
+  margin: "auto",
+  width: "50%",
+  fontWeight: "600",
+  fontSize: "130%",
+  whiteSpace: "nowrap",
+};
 
 const result = {
   hidden: {
@@ -37,31 +37,37 @@ const Modal = ({ text, type, data, url, imageId }) => {
   const history = useNavigate();
   return (
     <motion.div
-    style={{maxWidth:"600px"}}
+      style={{ maxWidth: "600px" }}
       variants={result}
       initial="hidden"
       animate="visible"
       exit="exit"
       align="center"
     >
-      <img className="rounded img_modal " src={url} alt="" style={{maxHeight:"600px"}}/>
-      {data && 
-        <ModalText data={data} text={text}/>
-      }
+      <img
+        className="rounded img_modal "
+        src={url}
+        alt=""
+        style={{ maxHeight: "600px" }}
+      />
+      {data && <ModalText data={data} text={text} />}
     </motion.div>
   );
 };
 
-
-const ModalText = ({data, text}) =>(
-  <div >
+const ModalText = ({ data, text }) => (
+  <div>
     <div>
-       <p style={liStyle}> {data[0]} </p>
-       <p style={{
-         wordWrap:'break-word'
-       }}>{text}</p>
+      <p style={liStyle}> {data[0]} </p>
+      <p
+        style={{
+          wordWrap: "break-word",
+        }}
+      >
+        {text}
+      </p>
     </div>
   </div>
-)
+);
 
 export default Modal;

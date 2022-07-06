@@ -5,7 +5,7 @@ const containerStyle = {
   position: "relative",
   width: "3rem",
   height: "3rem",
-  boxSizing: "border-box"
+  boxSizing: "border-box",
 };
 
 const circleStyle = {
@@ -18,13 +18,13 @@ const circleStyle = {
   position: "absolute",
   boxSizing: "border-box",
   top: 0,
-  left: 0
+  left: 0,
 };
 
 const spinTransition = {
   loop: Infinity,
   ease: "linear",
-  duration: 1
+  duration: 1,
 };
 
 export default function CircleLoader() {

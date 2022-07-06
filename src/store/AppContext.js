@@ -1,5 +1,11 @@
-import React from "react"
+import React from "react";
 
-const AppContext = React.createContext({loggedIn : false, user : {}, images : [], likedImages: [], setLikedImages: () => {}})
+const AppContext = React.createContext({
+  loggedIn: false,
+  user: {},
+  images: [],
+  likedImages: [],
+  setLikedImages: () => {},
+});
 
-export default AppContext
+export default AppContext;
